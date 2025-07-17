@@ -237,6 +237,7 @@ sudo apt-get  -y  install geany
 sudo apt-get  -y  install geany-plugins
 sudo apt-get  -y  install codeblocks codeblocks-common codeblocks-contrib
 sudo apt -y install mono-complete
+sudo apt -y install pandoc
 
 # 9. 辦公與教育
 echo "9. 辦公與教育..."
