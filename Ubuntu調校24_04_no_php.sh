@@ -236,8 +236,8 @@ sudo apt install -y python3-pip cmake meson ninja-build
 sudo apt-get  -y  install geany
 sudo apt-get  -y  install geany-plugins
 sudo apt-get  -y  install codeblocks codeblocks-common codeblocks-contrib
-sudo apt -y install mono-complete
 sudo apt -y install pandoc
+sudo apt -y install mono-complete
 
 # 9. 辦公與教育
 echo "9. 辦公與教育..."
@@ -374,13 +374,14 @@ sudo gdebi --non-interactive madedit-mod_0.4.20-1_amd64_Ubuntu_22_04_2.deb
 sleep 5
 rm madedit-mod_0.4.20-1_amd64_Ubuntu_22_04_2.deb
 
+
 # 安裝 新 自製語音小祕書及上網查自典
 echo "20. 安裝 新 自製語音小祕書及上網查自典..."
 # 取得英語小祕書
 if git clone "https://github.com/guidry/Ubuntu-tts-Agent"; then
     echo "✅ Clone Ubuntu-tts-Agent successful"
 	cd "Ubuntu-tts-Agent"
-	#sed -i '1 i\#!/bin/bash' ./install_tts.sh
+	#sed -i '1 i\#!/bin/bash' ./install_xu_tts.sh
 	#sed -i '1 i\#!/bin/bash' ./install_lookupDict.sh
 	sleep 5	
 	if [ ! -f install_PiperTTS.sh ]; then
@@ -392,11 +393,11 @@ if git clone "https://github.com/guidry/Ubuntu-tts-Agent"; then
 		sleep 5  
 	fi
 	
-	if [ ! -f install_tts.sh ]; then
+	if [ ! -f install_xu_tts.sh ]; then
 	  echo "安裝腳本 install_tts.sh 不存在！" 
 	else
-		chmod +x install_tts.sh
-		./install_tts.sh
+		chmod +x install_xu_tts.sh
+		./install_xu_tts.sh
 		echo "安裝了語音小祕書，請到「顯示應用程式」控制面板找尋 Text to speech，再加入喜好，即可在控制列中點按唸圖示唸出選取的英語句子來。"
 		sleep 5  
 	fi
