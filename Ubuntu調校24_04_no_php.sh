@@ -28,23 +28,15 @@ sudo apt install -y python3-pyasyncore flatpak
 
 # 安裝 GNOME 相關工具
 sudo apt install -y gnome-tweaks
-sudo apt install -y  gnome-shell-extensions 
+sudo apt install -y gnome-shell-extensions 
 sudo apt install -y gnome-control-center 
 sudo apt install -y nautilus-admin
 # 安裝文檔與辦公工具
 sudo apt install -y gedit gedit-plugins 
 sudo apt install -y libreoffice libreoffice-base libreoffice-mysql-connector
 sudo apt install -y texstudio
-sudo apt install libreoffice-l10n-zh-tw
-sudo apt-get install -y okular
+sudo apt install -y libreoffice-l10n-zh-tw
 
-# 安裝網絡工具
-sudo apt install -y traceroute 
-sudo apt install -y whois 
-sudo apt install -y samba
-sudo apt install -y libpam-smbpass
-sudo apt install -y filezilla
-sudo apt-get  -y  install chromium-browser
 # 安裝圖形與設計工具
 sudo apt install -y imagemagick
 sudo apt install -y php-imagick
@@ -94,7 +86,8 @@ sudo apt install -y untex wv
 sudo apt install -y libchm-bin
 sudo apt install -y librdf-icalendar-perl
 # 安裝圖表工具
-sudo apt install -y dia dia-gnome xmind
+sudo apt install -y dia dia-gnome 
+sudo snap xmind
 
 
 # 安裝剩餘工具
@@ -129,7 +122,7 @@ sudo apt-get -y   install software-center
 sudo apt-get -y install pcmanfm
 # 清理緩存
 sudo apt autoremove -y
-sudo apt clean
+#sudo apt clean
 
 # 3. 桌面環境與選單 (擇一安裝)
 echo "3. 桌面環境與選單 (擇一安裝)..."
@@ -198,6 +191,7 @@ sudo apt install -y mkisofs
 sudo apt install -y growisofs 
 sudo apt install -y mypaint 
 sudo apt install -y gimp 
+sudo apt install -y gthumb
 sudo apt install -y inkscape 
 sudo apt install -y krita 
 sudo apt install -y blender 
@@ -205,7 +199,7 @@ sudo apt install -y audacity
 sudo apt install -y shotcut 
 sudo apt install -y mpv 
 sudo apt install -y winff
-sudo apt-get  -y  install gimp-plugin-registry
+sudo apt install -y gimp-plugin-registry
 sudo snap install vidcutter
 DESKTOP_FILE="/usr/share/applications/org.gnome.Totem.desktop"
 
@@ -238,7 +232,7 @@ sudo apt-get  -y  install aegisub aegisub-l10n
 # 8. 開發工具
 echo "8. 開發工具..."
 sudo apt install -y default-jdk icedtea-netx icedtea-netx-common
-sudo apt install -y python3-pip cmake meson ninja-build openjdk-17-jdk
+sudo apt install -y python3-pip cmake meson ninja-build 
 sudo apt-get  -y  install geany
 sudo apt-get  -y  install geany-plugins
 sudo apt-get  -y  install codeblocks codeblocks-common codeblocks-contrib
@@ -276,7 +270,17 @@ sudo apt-get -y install  gocr
 sudo apt-get -y install  gv
 
 # 13. 額外應用程式 (手動安裝)
-echo "13. 額外應用程式及工具與字體 (手動安裝)..."
+echo "13. 額外應用程式､網路工具與字體 ..."
+
+sudo apt install -y okular
+
+# 安裝網絡工具
+sudo apt install -y traceroute 
+sudo apt install -y whois 
+sudo apt install -y samba
+sudo apt install -y libpam-smbpass
+sudo apt install -y filezilla
+sudo apt-get  -y  install chromium-browser
 # 安裝字體工具
 sudo apt install -y fonts-cns11643-kai
 sudo apt install -y fonts-cns11643-sung
@@ -299,7 +303,7 @@ sudo apt install -y fonts-cwtex-kai
 # 14. 清理
 echo "14. 清理..."
 sudo apt autoremove -y
-sudo apt clean
+#sudo apt clean
 
 # 額外設定
 echo "15. 額外設定..."
@@ -410,9 +414,6 @@ else
     echo "❌ Clone Ubuntu-tts-Agent failed 找不到英文語音祕書的專案可下載"
 fi
 sudo update-desktop-database
-
-
-
 
 # 調校 Geany
 echo "21. 調校 Geany..."
@@ -527,7 +528,7 @@ rm ~/.local/share/mime/mime.cache
 sudo update-mime-database /usr/share/mime
 update-mime-database ~/.local/share/mime
 sudo update-desktop-database 
-
+sudo apt clean -y
 echo "Ubuntu 24.04 優化安裝完成！"
 echo "請根據您的需求，取消註解或修改需要安裝的軟體。"
 echo "部分軟體可能需要額外的設定，例如加入官方 repository 或透過 snap/flatpak 安裝。"
