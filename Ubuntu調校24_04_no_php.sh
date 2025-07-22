@@ -73,7 +73,7 @@ sudo apt install -y goldendict
 sudo apt install -y kbibtex
 sudo apt install -y hspell
 # 安裝 R 語言相關工具
-sudo apt install -y r-cran-haven r-cran-xtable r-cran-tcltk2
+sudo apt install -y r-cran-haven r-cran-xtable r-cran-tcltk2 r-cran-r2html
 # 安裝屏幕錄製工具
 sudo apt install -y vokoscreen
 # 安裝視頻編輯工具
