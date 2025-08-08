@@ -25,6 +25,7 @@ sudo apt install -y gparted
 sudo apt install -y dconf-editor
 sudo apt install -y file-roller
 sudo apt install -y python3-pyasyncore flatpak
+sudo apt install -y nautilus-share
 
 # 安裝 GNOME 相關工具
 sudo apt install -y gnome-tweaks
