@@ -25,7 +25,7 @@ sudo apt install -y gparted
 sudo apt install -y dconf-editor
 sudo apt install -y file-roller
 sudo apt install -y python3-pyasyncore flatpak
-sudo apt install -y nautilus-share
+
 
 # 安裝 GNOME 相關工具
 sudo apt install -y gnome-tweaks
@@ -276,11 +276,13 @@ echo "13. 額外應用程式､網路工具與字體 ..."
 
 sudo apt install -y okular
 
+
 # 安裝網絡工具
 sudo apt install -y traceroute 
 sudo apt install -y whois 
 sudo apt install -y samba
 sudo apt install -y libpam-smbpass
+sudo apt install -y nautilus-share
 sudo apt install -y filezilla
 sudo apt-get  -y  install chromium-browser
 # 安裝字體工具
