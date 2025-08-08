@@ -22,6 +22,7 @@ sudo apt install -y  libqtcore* libqtgui* libqtwebkit*
 # 安裝系統管理工具
 sudo apt install -y timeshift 
 sudo apt install -y gparted 
+sudo apt install -y efibootmgr
 sudo apt install -y dconf-editor
 sudo apt install -y file-roller
 sudo apt install -y python3-pyasyncore flatpak
