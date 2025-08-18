@@ -95,8 +95,8 @@ echo "Custom extract rule created at: $EXTRACT_RULE_FILE"
 
 # 排除開發和虛擬機器等資料夾
 # 請根據你的實際路徑和需要修改
-gsettings set org.freedesktop.Tracker3.Miner.Files ignored-directories "['file:///home/'$USER'/.git', 'file:///home/'$USER'/node_modules', 'file:///home/'$USER'/build', 'file:///home/'$USER'/__pycache__']"
-
+gsettings set org.freedesktop.Tracker3.Miner.Files ignored-directories \
+"['file:///home/$USER/.git', 'file:///home/$USER/node_modules', 'file:///home/$USER/build', 'file:///home/$USER/__pycache__']"
 # 排除大型二進制檔案
 # 注意：這裡會將這些檔案類型加到被忽略的檔案清單中
 gsettings set org.freedesktop.Tracker3.Miner.Files ignored-files "['*~', '.*', '~*', '*.iso', '*.vdi', '*.vmdk', '*.img']"
