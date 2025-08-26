@@ -25,6 +25,7 @@ mkdir -p ~/.config/systemd/user/tracker-miner-fs-3.service.d/
 tee ~/.config/systemd/user/tracker-miner-fs-3.service.d/override.conf > /dev/null <<EOT
 [Service]
 Environment=TRACKER_MINER_THREADS=1
+StandardError=null
 CPUAffinity=\$RANDOM_CORE
 CPUQuota=5%
 Nice=10
